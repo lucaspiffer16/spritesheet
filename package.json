@@ -1,0 +1,23 @@
+{
+  "name": "spritesheet",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "postinstall": "cp node_modules/@imagemagick/magick-wasm/dist/magick.wasm public/magick.wasm",
+    "build": "cp node_modules/@imagemagick/magick-wasm/dist/magick.wasm public/magick.wasm && tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@imagemagick/magick-wasm": "^0.0.41",
+    "jszip": "^3.10.1",
+    "preact": "^10.29.2"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.10.5",
+    "@types/node": "^24.13.2",
+    "typescript": "~6.0.2",
+    "vite": "^8.1.0"
+  }
+}
